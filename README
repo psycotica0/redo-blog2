@@ -1,0 +1,12 @@
+This is a set of do files, intended to provide a jumping off point for a website.
+
+It takes a series of .mime files and at the other end spits out sorted, tagged, templated static files based on the .mime files.
+As its engine it uses redo, which is a build-system. (https://github.com/apenwarr/redo)
+
+This means it should only build what is necessary to be built.
+If you don't have redo, you can check the above source to get it, or to get a minimal script that builds everything every time.
+It still, though, builds it all properly.
+
+One can try it out by executing:
+redo deploy
+This should build the example files, run them through bad templating, and populate the end directories with stuff.

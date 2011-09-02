@@ -1,4 +1,6 @@
 
+# This generates the default template script used by any tag without a special one
+
 echo '#!/bin/sh
 
 contents="$(cat)"

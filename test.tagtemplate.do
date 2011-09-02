@@ -1,4 +1,7 @@
 
+# This is a special template for items with the "test" tag.
+# It is meant to be sure that that feature works
+
 echo '#!/bin/sh
 
 contents="$(cat)"
