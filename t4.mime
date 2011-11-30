@@ -1,7 +1,8 @@
 Title: T4
 Tag: article
 Tag: stiltz
+Content-Type: text/html
 
-Blah!
-Rumple!
-Stiltz!
+<p>Blah!</p>
+<p>Rumple!</p>
+<p>Stiltz!</p>
