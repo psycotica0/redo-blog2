@@ -20,4 +20,4 @@ fi
 # Sed returns "" for me when I walk off the edge of the file
 next="$(grep "^$tag " < "tagindex" | sed -n "$(expr "$pos" + 1)"p | cut -d ' ' -f2-)"
 
-(echo "Next-Link: $next"; echo "Previous-Link: $prev"; cat "$dependedFile") | sh "$tag.tagtemplate"
+(echo "Next-Link: $next"; echo "Previous-Link: $prev"; cat "$dependedFile") | "./$tag.tagtemplate"

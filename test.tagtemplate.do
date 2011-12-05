@@ -18,4 +18,5 @@ echo "<html>
 	$body
 </body>
 </html>"
-'
+' > "$3"
+chmod a+x "$3"

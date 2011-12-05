@@ -24,4 +24,5 @@ echo " <h1> $title </h1>
 	$body
 </body>
 </html>"
-'
+' > "$3"
+chmod a+x "$3"
