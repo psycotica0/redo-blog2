@@ -10,14 +10,9 @@ modify_time="$(stat -c "%Y" "$1.mime")"
 # I can't get creation time from the system reliably
 create_time="$modify_time"
 
-# Since create time is arbitrary, this is not a good idea...
-# But, this is mostly an example for testing
-id="$create_time"
-
 # This is the date format (iso8601)
 date_format="%Y-%m-%dT%H:%M:%SZ"
 
-echo "ID: $id"
 # I don't know how standard the '@' to set based on epoch time is, but I know the -d isn't super standard
 echo "Date-Created: $(date -ud "@$create_time" "+$date_format")"
 echo "Date-Modified: $(date -ud "@$modify_time" "+$date_format")"
