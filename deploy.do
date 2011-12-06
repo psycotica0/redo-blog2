@@ -9,3 +9,11 @@ ls *.html | while read line; do
 	mkdir -p "$tag"
 	cp "$line" "$tag/$filename.html"
 done
+
+# And move the index files in too
+ls *.tagindex | while read line; do
+	tag="$(basename "$line" ".tagindex")"
+	# Just a precaution
+	mkdir -p "$tag"
+	cp "$line" "$tag/index.html"
+done

@@ -5,3 +5,5 @@ redo-ifchange "tagindex"
 
 sed 's/^\([^ ]*\) \(.*\)$/\2.\1.html/' < "tagindex" | xargs redo-ifchange
 
+# And make a tagindex for each tag
+sed 's/^\([^ ]*\) .*/\1.tagindex/' < "tagindex" | sort | uniq | xargs redo-ifchange
