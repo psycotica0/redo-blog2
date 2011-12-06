@@ -42,7 +42,7 @@ grep "^$tag " < "tagindex" | cut -d ' ' -f 2- | tac | while read file; do
 	echo "		<updated>$mod_date</updated>"
 	# Now spit out the body
 	echo '		<content type="html">'
-	sed '1,/^$/d' < "$file.converted"
+	sed '1,/^$/d' < "$file.converted" | sed 's/</\&lt;/g' | sed 's/>/\&gt;/g'
 	echo '		</content>'
 	echo '	</entry>'
 done
